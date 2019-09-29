@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多级下拉列表</title>
+    <link rel="stylesheet" href="./css/mtree.css">
+    <style>
+        body{
+            background-image: url(./img/780.jpg);
+            background-size: cover;
+            background-size: center;
+            background-repeat: no-repeat; 
+        }
+
+        .mtree-demo .mtree{
+            background: #eee;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 3px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="mtree transit">
+        <li><a href="#">Africa</a>
+            <ul>
+                <li><a href="#">Lorem.</a></li>
+                <li><a href="#">Odit.</a></li>
+                <li><a href="#">Quaerat.</a></li>
+                <li><a href="#">Velit?</a></li>
+                <li><a href="#">Odio.</a></li>
+                <li><a href="#">Inventore.</a></li>
+                <li><a href="#">Unde?</a></li>
+                <li><a href="#">Dicta.</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">America</a>
+            <ul>
+                <li><a href="#">North America</a>
+                    <ul>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">USA</a>
+                            <ul>
+                                <li><a href="#">Lorem.</a></li>
+                                <li><a href="#">Amet!</a>
+                                    <ul>
+                                        <li><a href="#">Lorem.</a></li>
+                                        <li><a href="#">Odit?</a></li>
+                                        <li><a href="#">Dolorum.</a></li>
+                                        <li><a href="#">Placeat!</a></li>
+                                        <li><a href="#">Optio.</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Lorem, ipsum.</a></li>
+                                <li><a href="#">Quidem, porro?</a></li>
+                                <li><a href="#">Quam, distinctio?</a></li>
+                                <li><a href="#">Assumenda, voluptatibus?</a></li>
+                                <li><a href="#">Voluptatum, corrupti.</a></li>
+                                <li><a href="#">Ipsa, omnis?</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Middle America</a>
+                    <ul>
+                        <li><a href="#">Lorem, ipsum.</a></li>
+                        <li><a href="#">Labore, cupiditate.</a></li>
+                        <li><a href="#">Adipisci, error.</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">South America</a>
+                <ul>
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Reprehenderit!</a></li>
+                    <li><a href="#">Doloribus!</a></li>
+                </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
+    <script src="./js/mtree.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mtree = $('ul.mtree');
+            mtree.wrap('<div class=mtree-demo></div>');
+            var skins = ['bubba','skinny','transit','jet','nix'];
+
+            mtree.addClass(skins[0]);
+            s.find('.csl').on('click.mtree-close-same-level',function(){
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
